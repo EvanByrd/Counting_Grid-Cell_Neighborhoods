@@ -3,6 +3,7 @@ const findNeighbors = require('./neighborFinder.js')
 
 const args = process.argv.slice(2)
 
+// input : [String, String]
 function main(input) {
     try {
         // we need to be sure that the inputs will not cause issues down the line

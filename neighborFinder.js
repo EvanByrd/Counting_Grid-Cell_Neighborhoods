@@ -1,3 +1,5 @@
+// matrix : [[int]]
+// n : int
 function findNeighbors(matrix, n) {
     try {
         // we need to be sure that the inputs will not cause issues down the line
@@ -17,6 +19,7 @@ function findNeighbors(matrix, n) {
     }
 }
 
+// matrix : [[int]]
 function collectPositiveCells(matrix) {
     const positiveCoordinates = []
 
@@ -37,6 +40,9 @@ function collectPositiveCells(matrix) {
     return positiveCoordinates
 }
 
+// n : int
+// positiveCoordinates : [coordinates : {x : int , y : int}]
+// matrix : [[int]]
 function countNeighbors(n, positiveCoordinates, matrix) {
     // We don't want to check every single cell of every single node for every single positive number,
     // but a two dimensional array isn't necessarily always going to be a matrix either.
