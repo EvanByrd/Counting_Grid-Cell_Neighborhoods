@@ -6,6 +6,9 @@ function findNeighbors(matrix, n) {
         if (matrix === undefined || n === undefined) {
             throw('Input must contain both a chosen matrix and neighborhood size')
         }
+        if (!Array.isArray(matrix) || typeof(n) !== 'number') {
+            throw('Invalid input types. Must contain a two dimensional array and a number')
+        }
         if (n < 0) {
             throw('Neighborhood size must be a positive integer value')
         }
@@ -15,7 +18,7 @@ function findNeighbors(matrix, n) {
 
         return neighboorhoods
     } catch (error) {
-        console.log(error);
+        console.log(error)
     }
 }
 

@@ -2,6 +2,22 @@
 const matrices = require('./matrices.js')
 const findNeighbors = require('./neighborFinder.js')
 
+test('testing empty inputs', () => {
+    expect(findNeighbors()).toBe(undefined)
+})
+
+test('testing invalid matrix', () => {
+    expect(findNeighbors(0, 3)).toBe(undefined)
+})
+
+test('testing invalid matrix', () => {
+    expect(findNeighbors({'3': []}, 3)).toBe(undefined)
+})
+
+test('testing invalid n value', () => {
+    expect(findNeighbors(matrices.m1, [1,2,3])).toBe(undefined)
+})
+
 // m1 n=3
 test('Testing standard 11x11 matrix with 1 positive number', () => {
     expect(findNeighbors(matrices.m1, 3)).toBe(25)

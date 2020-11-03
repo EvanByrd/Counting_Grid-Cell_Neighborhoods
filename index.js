@@ -21,7 +21,7 @@ function main(input) {
 
         console.log(numNeighbors)
     } catch (error) {
-        console.log(error);
+        console.log(error)
     }
 }
 
